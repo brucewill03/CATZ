@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/style.css">
-        <title>CATZ</title>
-    </head>
-    <body>
-      <div id="header">
-        <img src= "https://loremflickr.com/240/240/cat" />
-      </div>
 
-        <div class="container">
-  <div class="jumbotron">
-    <h1>Quote of the Day</h1> 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>CATZ</title>
+</head>
 
-            
-                <!-- img -->
-            </div>
-            <div>
-                <!-- panel w/ buttons -->
-                <div class="dropdown">
-            
-                      <div class="breed">
-                        <button>Breed</button>
-                        <ul>
-                          <li><a href="#">American Shorthair</a></li>
-                          <li><a href="#">Bengal</a></li>
-                          <li><a href="#">British Longhair</a></li>
-                          <li><a href="#">Burmese</a></li>
-                          <li><a href="#">Cyprus</a></li>
-                          <li><a href="#">Maine Coon</a></li>
-                          <li><a href="#">Persian</a></li>
-                          <li><a href="#">Ragdoll</a></li>
-                          <li><a href="#">Siamese</a></li>
-                          <li><a href="#">Sphynx</a></li>
-                        </ul>
-                      </div>
+<body>
+  <header>
+    <h1>CATZ</h1>
+  </header>
 
-                      <div class="category">
-                        <button>Category</button>
-                        <ul>
-                          <li><a href="#">American Shorthair</a></li>
-                          <li><a href="#">Bengal</a></li>
-                          <li><a href="#">British Longhair</a></li>
-                          <li><a href="#">Burmese</a></li>
-                          <li><a href="#">Cyprus</a></li>
-                          <li><a href="#">Maine Coon</a></li>
-                          <li><a href="#">Persian</a></li>
-                          <li><a href="#">Ragdoll</a></li>
-                          <li><a href="#">Siamese</a></li>
-                          <li><a href="#">Sphynx</a></li>
-                        </ul>
-                      </div>
-                    
-                    </div>
-                  </div>
-            </div>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Quote of the Day</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+      <!-- img -->
+      <div id="catz-image">
+    </div>
+
+    <div class="col-md-9">
+      <!-- panel w/ buttons -->
+      <div class="dropdown">
+
+        <div id="breed" class="breed">
+          <button>Breed</button>
+          <ul>
+            <li id="asho"><a href="#">American Shorthair</a></li>
+            <li id="beng"><a href="#">Bengal</a></li>
+            <li id="bslo"><a href="#">British Longhair</a></li>
+            <li id="bure"><a href="#">Burmese</a></li>
+            <li id="cypr"><a href="#">Cyprus</a></li>
+            <li id="mcoo"><a href="#">Maine Coon</a></li>
+            <li id="pers"><a href="#">Persian</a></li>
+            <li id="ragd"><a href="#">Ragdoll</a></li>
+            <li id="siam"><a href="#">Siamese</a></li>
+            <li id="sphy"><a href="#">Sphynx</a></li>
+          </ul>
         </div>
-        <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
-        <script src="script.js"></script>
-    </body>
+
+        <div id="breed-image">
+        </div>
+
+        <div id="category" class="category">
+          <button>Category</button>
+          <ul>
+            <li><a href="#">Boxes</a></li>
+            <li><a href="#">Clothes</a></li>
+            <li><a href="#">Hats</a></li>
+            <li><a href="#">Sinks</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+  <script src="bootstrap.bundle.min.js / bootstrap.bundle.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

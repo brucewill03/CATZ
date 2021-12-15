@@ -8,7 +8,7 @@ body {
     align-content: center;
 }
 
-h1{
+h2{
     position:relative;
     padding-left: 300px;
 }
@@ -51,9 +51,6 @@ button {
 
 }
 
-
-
-
 .breed a,
 .category a {
     color: white;
@@ -87,8 +84,7 @@ button {
     cursor: pointer;
 
 }
-.dropdown {
-    button:hover;
+.dropdown button:hover {
     top: 200px;
 }
 
@@ -97,8 +93,6 @@ button {
     opacity: 1;
     pointer-events: all;
     transform: translateY(0px);
-}
-
 }
 
 

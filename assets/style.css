@@ -1,4 +1,105 @@
-.navbar-brand {
-    font-size: 36px;
-    font-family: monospace;
+body {
+    height:100vh;
+    background-color: gainsboro;
 }
+
+.jumbotron {
+    position:relative;
+    align-content: center;
+}
+
+h1{
+    position:relative;
+    padding-left: 300px;
+}
+
+a,
+button {
+    font-family:fantasy
+}
+
+.dropdown {
+    height: 10vh;
+    background: salmon;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+.breed,
+.category {
+    position: relative;
+}
+
+.breed ul,
+.category ul {
+    position:absolute;
+    background: gray;
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+
+}
+
+
+
+
+.breed a,
+.category a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.breed li,
+.category li {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+
+.breed li:hover,
+.category li:hover {
+    background-color: salmon;
+    width: 150px;
+}
+
+
+.dropdown button{
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+.dropdown {
+    button:hover;
+    top: 200px;
+}
+
+.breed button:focus + ul,
+.category button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+}
+
+
+

@@ -4,18 +4,15 @@ body {
 }
 
 .jumbotron {
-    position:relative;
     align-content: center;
 }
 
 h2{
     position:relative;
-    padding-left: 300px;
 }
 
-a,
 button {
-    font-family:fantasy
+    font-family:fantasy;
 }
 
 .dropdown {
@@ -31,6 +28,7 @@ button {
 .breed,
 .category {
     position: relative;
+    text-align: center;
 }
 
 .breed ul,
@@ -88,16 +86,8 @@ button {
     top: 200px;
 }
 
-.breed button:focus + ul,
-.category button:focus + ul {
-    opacity: 1;
-    pointer-events: all;
-    transform: translateY(0px);
-}
-
 img {
-    width: 50px;
-    height: 50px;
-
+    width: 350px;
+    height: 350px;
+    margin: 10px 0 0 100px;
 }
-

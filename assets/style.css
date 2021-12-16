@@ -5,14 +5,11 @@ body {
 
 .jumbotron {
     align-content: center;
+    
 }
 
 h2{
     position:relative;
-}
-
-button {
-    font-family:fantasy;
 }
 
 .dropdown {

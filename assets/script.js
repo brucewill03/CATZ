@@ -15,6 +15,20 @@ function fetchBreedImageFromApi(breedShow) {
         });
 };
 
+let dropdown = $("#breed-dropdown");
+
+dropdown.empty();
+
+dropdown.prop('selectedIndex', 0);
+
+var url = 'https://api.thecatapi.com/v1/breeds';
+
+$.getJSON(url, function(data) {
+    $.each(data, function(key, entry) {
+        dropdown.append($('<option></option>').attr('value', entry.id).text(entry.name));
+    })
+});
+
 function displayBreedImage(data) {
 
     var breedImageUrl = data[0].url;
@@ -22,21 +36,10 @@ function displayBreedImage(data) {
     $("#breed-image").prepend("<img src='" + breedImageUrl + "' />");
 }
 
-$("#asho").click(function () {
-    fetchBreedImageFromApi("asho");
-});
+$("id").click(function() {
+    fetchBreedImageFromApi("id")
+})
 
-$("#beng").click(function () {
-    fetchBreedImageFromApi("beng");
-});
-
-$("#bslo").click(function () {
-    fetchBreedImageFromApi("bslo");
-});
-
-$("#bure").click(function () {
-    fetchBreedImageFromApi("bure");
-});
 
 function fetchCategoryFromApi(categoryShow) {
     var apiURL = 'https://api.thecatapi.com/v1/images/search?category_ids=' + categoryShow;
@@ -52,25 +55,23 @@ function fetchCategoryFromApi(categoryShow) {
         });
 };
 
+let dropdown1 = $("#category-dropdown");
+
+dropdown1.empty();
+
+dropdown1.prop('selectedIndex', 0);
+
+var url = 'https://api.thecatapi.com/v1/categories';
+
+$.getJSON(url, function(data) {
+    $.each(data, function(key, entry) {
+        dropdown1.append($('<option></option>').attr('value', entry.id).text(entry.name));
+    })
+});
+
 function displayCategoryImage(data) {
 
     var breedCategoryUrl = data[0].url;
 
     $("#category-image").prepend("<img src='" + breedCategoryUrl + "' />");
 };
-
-$("#5").click(function () {
-    fetchCategoryFromApi("5");
-});
-
-$("#15").click(function () {
-    fetchCategoryFromApi("15");
-});
-
-$("#1").click(function () {
-    fetchCategoryFromApi("1");
-});
-
-$("#14").click(function () {
-    fetchCategoryFromApi("14");
-});

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="./assets/style.css">
   <title>CATZ</title>
 </head>
@@ -17,35 +17,44 @@
   </header>
 
   <div class="container">
-    <div class="jumbotron">
-      <h2>“I have studied many philosophers and many cats. The wisdom of cats is infinitely superior.” – Hippolyte Taine</h2>
+    <div class="jumbotron #fbe9e7 deep-orange lighten-5">
+      <h2 id="quotes"></h2>
+    </div>
+  </div>
+
+  <div id="switch" class="row">
+    <div id="img-div" class="col l6 m6 s12">
+      <div id="image"></div>
+
     </div>
 
     <div class="row">
-      <div class="col-md-6">
-        <h3 class="text-center">Breed</h3>
-      <div id="breed" class="breed">
-          <button id="asho" type="button" class="btn btn-secondary">American Shorthair</button>
-          <button id="beng" type="button" class="btn btn-secondary">Bengal</button>
-          <button id="bslo" type="button" class="btn btn-secondary">British Longhair</button>
-          <button id="bure" type="button" class="btn btn-secondary">Burmese</button>
-      </div>
-      <div id="breed-image"></div>
-      </div>
-
-    <div class="col-md-6">
-      <h3 class="text-center">Category</h3>
-        <div id="category" class="category">
-            <button id="5" type="button" class="btn btn-secondary">Boxes</button>
-            <button id="15" type="button" class="btn btn-secondary">Clothes</button>
-            <button id="1" type="button" class="btn btn-secondary">Hats</button>
-            <button id="14" type="button" class="btn btn-secondary">Sinks</button>
+      <div id="breed-div" class="col l3 m3 s6">
+        <div>
+          <a id="breed" class="breed waves-effect waves-light btn-large #e57373 red lighten-2"
+            type="button"><span>Breed</span></a>
+          <select id="breed-dropdown" class="uk-width-large" uk-dropdown="pos: bottom-justify">
+            <ul></ul>
+          </select>
         </div>
-        <div id="category-image"></div>
-    </div>
-    </div>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <div id="category-div" class="col l3 m3 s6">
+        <div>
+          <a id="category" class="category waves-effect waves-light btn-large #e57373 red lighten-2"
+            type="button"><span>Category</span></a>
+          <select id="category-dropdown" class="uk-width-" uk-dropdown="pos: bottom-justify">
+            <ul></ul>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/script.js"></script>
 </body>
 

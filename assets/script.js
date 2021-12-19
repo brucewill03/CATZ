@@ -1,16 +1,3 @@
-// function quotesFromApi() {
-//     fetch("https://type.fit/api/quotes")
-//         .then(function (response) {
-//             response.json();
-//         })
-//         .then(function (data) {
-//             console.log(data);
-//             displayQuotes(data);
-//         });
-// };
-
-
-
 const settings = {
     "async": true,
     "crossDomain": true,
@@ -25,9 +12,9 @@ $.ajax(settings).done(function (response) {
 });
 
 function displayQuotes(data) {
-    
-        let quotesText = data[Math.floor(Math.random() * data.length)];
-        console.log(quotesText);
+
+    let quotesText = data[Math.floor(Math.random() * data.length)];
+    console.log(quotesText);
 
     var quotesTextUrl = quotesText.text;
 
@@ -66,9 +53,9 @@ $.getJSON(url, function (data) {
 
 });
 
-dropdown.change(function() {
-    fetchBreedImageFromApi($( this ).val());
-  });
+dropdown.change(function () {
+    fetchBreedImageFromApi($(this).val());
+});
 
 function fetchCategoryFromApi(categoryShow) {
     var apiURL = 'https://api.thecatapi.com/v1/images/search?category_ids=' + categoryShow;
@@ -103,6 +90,6 @@ $.getJSON(url, function (data) {
     })
 });
 
-dropdown1.change(function() {
-    fetchCategoryFromApi($( this ).val());
-  });
+dropdown1.change(function () {
+    fetchCategoryFromApi($(this).val());
+});

@@ -9,6 +9,9 @@ h3 {
 
 .jumbotron {
     align-content: center;
+    margin: 30px;
+    padding: 5px 20px 1px 20px;
+    border-radius: 5px;
 }
 
 /* .row {
@@ -28,4 +31,21 @@ img {
     margin: 10px 0 0 100px;
 }
 
+/* media queries*/
+@media screen and (max-width: 768px) {
+ 
+}
+
+@media screen and (max-width: 575px) {
+    h1 {
+        text-align: center;
+    }
+
+    .breed,
+    .category {
+        justify-content: center;
+        margin: auto;
+        display: flex;
+    }
+}
 

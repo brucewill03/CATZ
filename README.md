@@ -9,7 +9,7 @@ This website will serve as a place for cat enthusiast to come for a smile. If lo
 * CSS
 * Java Script
 * AJAX
-* Materializa
+* Materialize
 * Ulkit
 
 # Website 

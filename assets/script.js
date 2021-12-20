@@ -6,6 +6,27 @@ const settings = {
     "method": "GET"
 }
 
+// image object to store in localStorage.
+var previousImage = "";
+   
+
+var setPreviousImage = function() {
+    /* add tasks to localStorage */
+    localStorage.setItem("previousImage", previousImage);
+    console.log (previousImage);
+}
+
+
+var getPreviousImage = function() {
+    /* load the tasks from localStorage and create tasks in the right row */
+
+    var loadedPreviousImage = localStorage.getItem("previousImage");
+    if (loadedPreviousImage) {
+        $("#image").html("<img src='" + loadedPreviousImage + "' />");
+        console.log(loadedPreviousImage);
+        }
+    }
+
 $.ajax(settings).done(function (response) {
     const data = JSON.parse(response);
     console.log(data);
@@ -42,7 +63,7 @@ function displayBreedImage(data) {
 
     var breedImageUrl = data[0].url;
 
-    $("#image").html("<img src='" + breedImageUrl + "' />");
+    $("#image").html("<img id='physicalImage' src='" + breedImageUrl + "' />");
 };
 
 // allows dropdown to tie in with the api's breed id's
@@ -59,7 +80,14 @@ $.getJSON(url, function (data) {
 });
 
 dropdown.change(function () {
+    previousImage=$("#physicalImage").attr ("src"); 
+    setPreviousImage();
     fetchBreedImageFromApi($(this).val());
+});
+
+$("#previousImage").click (function() {
+    getPreviousImage();
+
 });
 
 // fetches category info by id from api
@@ -82,7 +110,7 @@ function displayCategoryImage(data) {
 
     var categoryImageUrl = data[0].url;
 
-    $("#image").html("<img src='" + categoryImageUrl + "' />");
+    $("#image").html("<img id='physicalImage' src='" + categoryImageUrl + "' />");
 };
 
 // allows dropdown to tie in with the api's category id's
@@ -99,5 +127,7 @@ $.getJSON(url, function (data) {
 });
 
 dropdown1.change(function () {
+    previousImage=$("#physicalImage").attr ("src"); 
+    setPreviousImage();
     fetchCategoryFromApi($(this).val());
-});
+})

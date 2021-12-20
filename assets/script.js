@@ -1,3 +1,4 @@
+// fetches info from quote api
 const settings = {
     "async": true,
     "crossDomain": true,
@@ -11,6 +12,7 @@ $.ajax(settings).done(function (response) {
     displayQuotes(data);
 });
 
+// displays quotes 
 function displayQuotes(data) {
 
     let quotesText = data[Math.floor(Math.random() * data.length)];
@@ -21,6 +23,7 @@ function displayQuotes(data) {
     $("#quotes").html(quotesTextUrl);
 };
 
+// fetches breed info by id from api
 function fetchBreedImageFromApi(breedShow) {
     var apiURL = 'https://api.thecatapi.com/v1/images/search?breed_ids=' + breedShow;
     fetch(apiURL)
@@ -34,6 +37,7 @@ function fetchBreedImageFromApi(breedShow) {
         });
 };
 
+// displays image based off breed id from api
 function displayBreedImage(data) {
 
     var breedImageUrl = data[0].url;
@@ -41,6 +45,7 @@ function displayBreedImage(data) {
     $("#image").html("<img src='" + breedImageUrl + "' />");
 };
 
+// allows dropdown to tie in with the api's breed id's
 let dropdown = $("#breed-dropdown");
 dropdown.empty();
 dropdown.prop('selectedIndex', 0);
@@ -57,6 +62,7 @@ dropdown.change(function () {
     fetchBreedImageFromApi($(this).val());
 });
 
+// fetches category info by id from api
 function fetchCategoryFromApi(categoryShow) {
     var apiURL = 'https://api.thecatapi.com/v1/images/search?category_ids=' + categoryShow;
 
@@ -71,6 +77,7 @@ function fetchCategoryFromApi(categoryShow) {
         });
 };
 
+// displays image based off category id from api
 function displayCategoryImage(data) {
 
     var categoryImageUrl = data[0].url;
@@ -78,6 +85,7 @@ function displayCategoryImage(data) {
     $("#image").html("<img src='" + categoryImageUrl + "' />");
 };
 
+// allows dropdown to tie in with the api's category id's
 let dropdown1 = $("#category-dropdown");
 dropdown1.empty();
 dropdown1.prop('selectedIndex', 0);
